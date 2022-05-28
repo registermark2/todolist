@@ -68,10 +68,10 @@ const requestListener = async(req, res) => {
     res.writeHead(404, headers);
     res.write(JSON.stringify({
       status: 'false',
-      data: '無此葉面'
+      data: '無此頁面'
     }));
     res.end();
   }
 }
 
-http.createServer(requestListener).listen(process.env.PORT);
+http.createServer(requestListener).listen(process.env.PORT || 3005);
